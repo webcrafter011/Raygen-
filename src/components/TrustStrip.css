@@ -1,0 +1,47 @@
+.trust-strip {
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.trust-items {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.trust-item {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 12px 20px;
+  border-radius: 24px;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+}
+
+.trust-caption {
+  color: var(--gray);
+  max-width: 600px;
+  margin: 16px auto 0;
+}
+
+@media (max-width: 768px) {
+  .trust-strip {
+    padding: 24px 16px;
+  }
+  
+  .trust-items {
+    gap: 12px;
+  }
+  
+  .trust-item {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+}

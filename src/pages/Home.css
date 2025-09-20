@@ -1,0 +1,65 @@
+.home {
+  position: relative;
+}
+
+.contact-section {
+  padding: 64px 24px;
+  text-align: center;
+  background-color: var(--light-gray);
+}
+
+.contact-section h2 {
+  margin-bottom: 16px;
+  font-size: 2rem;
+}
+
+.contact-section p {
+  color: var(--gray);
+  margin-bottom: 32px;
+  font-size: 1.1rem;
+}
+
+.mobile-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px;
+  background-color: var(--white);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: none;
+}
+
+.mobile-contact-btn {
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  padding: 16px 24px;
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.mobile-contact-btn:hover,
+.mobile-contact-btn:focus {
+  background-color: #1f5a3d;
+}
+
+.mobile-contact-btn:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+@media (max-width: 768px) {
+  .mobile-cta {
+    display: block;
+  }
+  
+  .contact-section {
+    padding: 48px 16px 80px 16px; /* Extra bottom padding for mobile CTA */
+  }
+}

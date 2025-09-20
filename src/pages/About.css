@@ -1,0 +1,106 @@
+.about-page {
+  min-height: 100vh;
+}
+
+.about-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px 24px 64px;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.about-hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.about-hero p {
+  font-size: 1.2rem;
+  color: var(--gray);
+}
+
+.about-content {
+  display: grid;
+  gap: 48px;
+}
+
+.about-text h2 {
+  color: var(--primary-color);
+  margin-bottom: 24px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.about-text p {
+  color: var(--gray);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.about-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-text li {
+  padding: 8px 0;
+  padding-left: 24px;
+  position: relative;
+  color: var(--gray);
+}
+
+.about-text li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+.contact-info {
+  background-color: var(--light-gray);
+  padding: 32px;
+  border-radius: var(--border-radius);
+}
+
+.contact-info h2 {
+  color: var(--primary-color);
+  margin-bottom: 24px;
+}
+
+.contact-details p {
+  margin-bottom: 12px;
+  color: var(--primary-color);
+}
+
+.contact-details strong {
+  color: var(--secondary-color);
+  display: inline-block;
+  min-width: 100px;
+}
+
+@media (max-width: 768px) {
+  .about-main {
+    padding: 24px 16px 48px;
+  }
+  
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  
+  .about-hero p {
+    font-size: 1.1rem;
+  }
+  
+  .about-content {
+    gap: 32px;
+  }
+  
+  .contact-info {
+    padding: 24px;
+  }
+}

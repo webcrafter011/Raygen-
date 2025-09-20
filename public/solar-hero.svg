@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400" width="800" height="400">
+  <defs>
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0F6FF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="panelGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C5F3F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E4A2F;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Sky background -->
+  <rect width="800" height="300" fill="url(#skyGradient)"/>
+  
+  <!-- Ground -->
+  <rect y="300" width="800" height="100" fill="#8FBC8F"/>
+  
+  <!-- Solar panels array -->
+  <g transform="translate(50, 180)">
+    <!-- Row 1 -->
+    <rect x="0" y="0" width="100" height="60" fill="url(#panelGradient)" rx="3"/>
+    <rect x="110" y="0" width="100" height="60" fill="url(#panelGradient)" rx="3"/>
+    <rect x="220" y="0" width="100" height="60" fill="url(#panelGradient)" rx="3"/>
+    <rect x="330" y="0" width="100" height="60" fill="url(#panelGradient)" rx="3"/>
+    
+    <!-- Row 2 -->
+    <rect x="0" y="70" width="100" height="60" fill="url(#panelGradient)" rx="3"/>
+    <rect x="110" y="70" width="100" height="60" fill="url(#panelGradient)" rx="3"/>
+    <rect x="220" y="70" width="100" height="60" fill="url(#panelGradient)" rx="3"/>
+    <rect x="330" y="70" width="100" height="60" fill="url(#panelGradient)" rx="3"/>
+    
+    <!-- Panel grid lines -->
+    <g stroke="#1A3A2A" stroke-width="1" fill="none">
+      <!-- Vertical lines -->
+      <line x1="33" y1="0" x2="33" y2="130"/>
+      <line x1="67" y1="0" x2="67" y2="130"/>
+      <line x1="143" y1="0" x2="143" y2="130"/>
+      <line x1="177" y1="0" x2="177" y2="130"/>
+      <line x1="253" y1="0" x2="253" y2="130"/>
+      <line x1="287" y1="0" x2="287" y2="130"/>
+      <line x1="363" y1="0" x2="363" y2="130"/>
+      <line x1="397" y1="0" x2="397" y2="130"/>
+      
+      <!-- Horizontal lines -->
+      <line x1="0" y1="20" x2="430" y2="20"/>
+      <line x1="0" y1="40" x2="430" y2="40"/>
+      <line x1="0" y1="90" x2="430" y2="90"/>
+      <line x1="0" y1="110" x2="430" y2="110"/>
+    </g>
+  </g>
+  
+  <!-- More solar panels in distance -->
+  <g transform="translate(500, 220)" opacity="0.7">
+    <rect x="0" y="0" width="80" height="40" fill="url(#panelGradient)" rx="2"/>
+    <rect x="90" y="0" width="80" height="40" fill="url(#panelGradient)" rx="2"/>
+    <rect x="180" y="0" width="80" height="40" fill="url(#panelGradient)" rx="2"/>
+  </g>
+  
+  <!-- Sun -->
+  <circle cx="700" cy="80" r="40" fill="#FFD700" opacity="0.9"/>
+  <g stroke="#FFD700" stroke-width="3" opacity="0.6">
+    <line x1="700" y1="20" x2="700" y2="30"/>
+    <line x1="700" y1="130" x2="700" y2="140"/>
+    <line x1="640" y1="80" x2="650" y2="80"/>
+    <line x1="750" y1="80" x2="760" y2="80"/>
+    <line x1="665" y1="45" x2="672" y2="52"/>
+    <line x1="728" y1="108" x2="735" y2="115"/>
+    <line x1="735" y1="45" x2="728" y2="52"/>
+    <line x1="672" y1="108" x2="665" y2="115"/>
+  </g>
+  
+  <!-- Energy flow lines (subtle) -->
+  <g stroke="#FFD700" stroke-width="2" fill="none" opacity="0.3">
+    <path d="M 200 200 Q 250 150 300 180"/>
+    <path d="M 250 210 Q 300 160 350 190"/>
+    <path d="M 300 220 Q 350 170 400 200"/>
+  </g>
+  
+  <!-- Title text -->
+  <text x="400" y="350" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2C7A53">
+    Solar Farm Investment
+  </text>
+  <text x="400" y="380" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#666">
+    Own your solar asset • Earn monthly returns
+  </text>
+</svg>
