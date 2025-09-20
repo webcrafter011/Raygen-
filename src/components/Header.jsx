@@ -17,6 +17,14 @@ const Header = ({ onContactClick }) => {
           <li><a href="#how-it-works">How it works</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
+        <div className="auth-section">
+          <Link to="/login" className="auth-link login-link" aria-current={location.pathname === '/login' ? 'page' : undefined}>
+            Login
+          </Link>
+          <Link to="/register" className="auth-link register-btn" aria-current={location.pathname === '/register' ? 'page' : undefined}>
+            Sign Up
+          </Link>
+        </div>
         <button className="contact-btn" aria-label="Contact Sales" onClick={onContactClick}>Contact Sales</button>
       </nav>
     </header>
