@@ -12,7 +12,7 @@ const benefits = [
   },
   {
     icon: '🔒',
-    text: 'Transparent 7-year investment bond',
+    text: 'Transparent 15-year investment locking period',
   },
 ];
 

@@ -5,7 +5,7 @@ const steps = [
   { step: 1, title: 'Pick your investment', desc: 'Choose the amount you want to invest in solar farm units' },
   { step: 2, title: 'We allocate your asset and assign your unique asset ID', desc: 'Receive your dedicated solar asset with unique identification' },
   { step: 3, title: 'Receive monthly payouts', desc: 'Get predictable monthly returns deposited to your account' },
-  { step: 4, title: 'Principal returned at bond maturity (7 years)', desc: 'Receive your initial investment back after 7 years' },
+  { step: 4, title: 'Principal returned at locking period maturity (15 years)', desc: 'Receive your initial investment back after 15 years' },
 ];
 
 const HowItWorks = () => (

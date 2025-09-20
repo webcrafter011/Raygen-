@@ -5,7 +5,7 @@ const trustItems = [
   { label: '1 kW = ₹60,000' },
   { label: 'Annual yield 8.25% p.a.' },
   { label: 'Monthly payout per kW = ₹412.50' },
-  { label: '7-year bond' },
+  { label: '15-year locking period' },
 ];
 
 const TrustStrip = () => (

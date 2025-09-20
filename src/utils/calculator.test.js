@@ -23,7 +23,7 @@ describe('Currency Formatting', () => {
 describe('Calculator Logic', () => {
   const COST_PER_KW = 60000;
   const ANNUAL_RATE = 0.0825;
-  const BOND_TERM = 7;
+  const BOND_TERM = 15;
 
   test('calculates kW from amount correctly', () => {
     expect(120000 / COST_PER_KW).toBe(2);
@@ -44,14 +44,14 @@ describe('Calculator Logic', () => {
     expect(monthlyPayout).toBe(412.5);
   });
 
-  test('calculates 7-year projections correctly', () => {
+  test('calculates 15-year projections correctly', () => {
     const amount = 60000;
     const annualPayout = amount * ANNUAL_RATE;
-    const totalIncome7yr = annualPayout * BOND_TERM;
-    const totalReceived7yr = amount + totalIncome7yr;
+    const totalIncome15yr = annualPayout * BOND_TERM;
+    const totalReceived15yr = amount + totalIncome15yr;
     
-    expect(totalIncome7yr).toBe(34650);
-    expect(totalReceived7yr).toBe(94650);
+    expect(totalIncome15yr).toBe(74250);
+    expect(totalReceived15yr).toBe(134250);
   });
 
   test('validates minimum investment', () => {

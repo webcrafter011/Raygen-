@@ -10,7 +10,7 @@ export default function Calculator() {
   const COST_PER_KW = 60000; // ₹ per kW
   const ANNUAL_RATE = 0.0825; // 8.25% per year
   const ANNUAL_PAYOUT_PER_KW = COST_PER_KW * ANNUAL_RATE; // ₹4950
-  const BOND_TERM = 7; // years
+  const BOND_TERM = 15; // years
 
   // State
   const [inputType, setInputType] = useState('kw'); // 'kw' or 'amount'
@@ -55,8 +55,8 @@ export default function Calculator() {
 
   const annualPayout = calcAmount * ANNUAL_RATE;
   const monthlyPayout = annualPayout / 12;
-  const totalIncome7yr = annualPayout * BOND_TERM;
-  const totalReceived7yr = calcAmount + totalIncome7yr;
+  const totalIncome15yr = annualPayout * BOND_TERM;
+  const totalReceived15yr = calcAmount + totalIncome15yr;
 
   const generateYearlyTable = () => {
     const rows = [];
@@ -171,7 +171,7 @@ export default function Calculator() {
                 <div>8.25% p.a.</div>
               </div>
               <div>
-                <div>Bond term:</div>
+                <div>Locking period:</div>
                 <div>{BOND_TERM} years</div>
               </div>
               <div>
@@ -184,7 +184,7 @@ export default function Calculator() {
               <p>
                 <strong>Example:</strong> 1 kW → {formatCurrency ? formatCurrency(COST_PER_KW) : `₹${COST_PER_KW.toLocaleString()}`} → Annual{' '}
                 {formatCurrency ? formatCurrency(ANNUAL_PAYOUT_PER_KW) : `₹${ANNUAL_PAYOUT_PER_KW.toFixed(2)}`} → Monthly{' '}
-                {formatCurrency ? formatCurrency(ANNUAL_PAYOUT_PER_KW / 12) : `₹${(ANNUAL_PAYOUT_PER_KW / 12).toFixed(2)}`} → 7-year income{' '}
+                {formatCurrency ? formatCurrency(ANNUAL_PAYOUT_PER_KW / 12) : `₹${(ANNUAL_PAYOUT_PER_KW / 12).toFixed(2)}`} → 15-year income{' '}
                 {formatCurrency ? formatCurrency(ANNUAL_PAYOUT_PER_KW * BOND_TERM) : `₹${(ANNUAL_PAYOUT_PER_KW * BOND_TERM).toFixed(2)}`} → Total received{' '}
                 {formatCurrency ? formatCurrency(COST_PER_KW + ANNUAL_PAYOUT_PER_KW * BOND_TERM) : `₹${(COST_PER_KW + ANNUAL_PAYOUT_PER_KW * BOND_TERM).toFixed(2)}`}.
               </p>
@@ -223,13 +223,13 @@ export default function Calculator() {
                 </div>
 
                 <div className="result-item">
-                  <span>7-year Income:</span>
-                  <span className="value">{formatCurrency ? formatCurrency(totalIncome7yr) : `₹${totalIncome7yr.toFixed(2)}`}</span>
+                  <span>15-year Income:</span>
+                  <span className="value">{formatCurrency ? formatCurrency(totalIncome15yr) : `₹${totalIncome15yr.toFixed(2)}`}</span>
                 </div>
 
                 <div className="result-item highlight">
                   <span>Total Received at Maturity:</span>
-                  <span className="value">{formatCurrency ? formatCurrency(totalReceived7yr) : `₹${totalReceived7yr.toFixed(2)}`}</span>
+                  <span className="value">{formatCurrency ? formatCurrency(totalReceived15yr) : `₹${totalReceived15yr.toFixed(2)}`}</span>
                 </div>
               </div>
 
@@ -286,7 +286,7 @@ export default function Calculator() {
 
           <div className="calculator-disclaimer" style={{ marginTop: '1rem' }}>
             <small>
-              Illustrative figures. Returns shown before taxes. Principal refundable at end of {BOND_TERM}-year bond. Investments subject to
+              Illustrative figures. Returns shown before taxes. Principal refundable at end of {BOND_TERM}-year locking period. Investments subject to
               terms and conditions.
             </small>
           </div>

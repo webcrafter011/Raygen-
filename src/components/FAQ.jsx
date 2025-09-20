@@ -11,8 +11,8 @@ const faqs = [
     answer: 'Monthly payouts are made on approximately the same date each month directly to your registered bank account.',
   },
   {
-    question: 'What happens at bond maturity?',
-    answer: 'At the end of the 7-year bond period, your principal investment amount is returned in full.',
+    question: 'What happens at locking period maturity?',
+    answer: 'At the end of the 15-year locking period, your principal investment amount is returned in full.',
   },
   {
     question: 'What is the tax treatment?',

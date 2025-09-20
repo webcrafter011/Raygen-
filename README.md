@@ -86,7 +86,7 @@ src/
   - kW = amount / 60,000
   - annual_payout = amount * 0.0825
   - monthly_payout = annual_payout / 12
-  - 7-year projections with year-by-year breakdown
+  - 15-year projections with year-by-year breakdown
 - Indian rupee formatting with proper separators
 
 ### Contact Form
@@ -114,13 +114,13 @@ src/
 
 ### Key Messaging
 - **Headline**: "Own a solar asset. Earn passive monthly income."
-- **Value Prop**: Invest from ₹60,000, get 8.25% annual returns, 7-year bond
+- **Value Prop**: Invest from ₹60,000, get 8.25% annual returns, 15-year locking period
 - **Trust Elements**: Professional management, predictable income, transparent operations
 
 ### Investment Details
 - **Minimum**: ₹60,000 (1 kW)
 - **Returns**: 8.25% per annum (₹412.50 monthly per kW)
-- **Term**: 7-year bond with principal return at maturity
+- **Term**: 15-year locking period with principal return at maturity
 - **Target**: Monthly passive income without rooftop solar hassles
 
 ## API Integration
