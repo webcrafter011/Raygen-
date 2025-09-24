@@ -4,7 +4,7 @@ import './FAQ.css';
 const faqs = [
   {
     question: 'How are returns calculated?',
-    answer: 'Returns are calculated at 8.25% per annum on your investment amount. Use our calculator to see exact figures for your investment.',
+    answer: 'Returns are calculated at 8.37% per annum on your investment amount. Use our calculator to see exact figures for your investment.',
   },
   {
     question: 'When are payouts made?',

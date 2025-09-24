@@ -8,8 +8,8 @@ import './Calculator.css';
 export default function Calculator() {
   // Constants
   const COST_PER_KW = 60000; // ₹ per kW
-  const ANNUAL_RATE = 0.0825; // 8.25% per year
-  const ANNUAL_PAYOUT_PER_KW = COST_PER_KW * ANNUAL_RATE; // ₹4950
+  const ANNUAL_PAYOUT_PER_KW = 5019; // ₹5,019 per year (5 units/day × 365 × ₹2.75/unit)
+  const ANNUAL_RATE = ANNUAL_PAYOUT_PER_KW / COST_PER_KW; // ~8.37% per year
   const BOND_TERM = 15; // years
 
   // State
@@ -168,7 +168,7 @@ export default function Calculator() {
               </div>
               <div>
                 <div>Annual rate:</div>
-                <div>8.25% p.a.</div>
+                <div>8.37% p.a.</div>
               </div>
               <div>
                 <div>Locking period:</div>

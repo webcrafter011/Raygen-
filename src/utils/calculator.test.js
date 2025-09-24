@@ -3,8 +3,8 @@ import { formatCurrency } from '../src/utils/currency';
 describe('Currency Formatting', () => {
   test('formats Indian rupees correctly', () => {
     expect(formatCurrency(60000)).toBe('₹60,000');
-    expect(formatCurrency(412.50)).toBe('₹412.50');
-    expect(formatCurrency(4950)).toBe('₹4,950');
+    expect(formatCurrency(418.25)).toBe('₹418.25');
+    expect(formatCurrency(5019)).toBe('₹5,019');
     expect(formatCurrency(100000)).toBe('₹1,00,000');
   });
 
@@ -14,15 +14,16 @@ describe('Currency Formatting', () => {
   });
 
   test('handles decimal places correctly', () => {
-    expect(formatCurrency(412.5)).toBe('₹412.50');
-    expect(formatCurrency(412)).toBe('₹412');
-    expect(formatCurrency(412.123)).toBe('₹412.12');
+    expect(formatCurrency(418.25)).toBe('₹418.25');
+    expect(formatCurrency(418)).toBe('₹418');
+    expect(formatCurrency(418.123)).toBe('₹418.12');
   });
 });
 
 describe('Calculator Logic', () => {
   const COST_PER_KW = 60000;
-  const ANNUAL_RATE = 0.0825;
+  const ANNUAL_PAYOUT_PER_KW = 5019;
+  const ANNUAL_RATE = ANNUAL_PAYOUT_PER_KW / COST_PER_KW; // ~0.0837
   const BOND_TERM = 15;
 
   test('calculates kW from amount correctly', () => {
@@ -33,25 +34,22 @@ describe('Calculator Logic', () => {
 
   test('calculates annual payout correctly', () => {
     const amount = 60000;
-    const expectedAnnualPayout = amount * ANNUAL_RATE;
-    expect(expectedAnnualPayout).toBe(4950);
+    const expectedAnnualPayout = ANNUAL_PAYOUT_PER_KW;
+    expect(expectedAnnualPayout).toBe(5019);
   });
 
   test('calculates monthly payout correctly', () => {
-    const amount = 60000;
-    const annualPayout = amount * ANNUAL_RATE;
-    const monthlyPayout = annualPayout / 12;
-    expect(monthlyPayout).toBe(412.5);
+    const monthlyPayout = ANNUAL_PAYOUT_PER_KW / 12;
+    expect(Math.round(monthlyPayout * 100) / 100).toBe(418.25);
   });
 
   test('calculates 15-year projections correctly', () => {
     const amount = 60000;
-    const annualPayout = amount * ANNUAL_RATE;
-    const totalIncome15yr = annualPayout * BOND_TERM;
+    const totalIncome15yr = ANNUAL_PAYOUT_PER_KW * BOND_TERM;
     const totalReceived15yr = amount + totalIncome15yr;
     
-    expect(totalIncome15yr).toBe(74250);
-    expect(totalReceived15yr).toBe(134250);
+    expect(totalIncome15yr).toBe(75285);
+    expect(totalReceived15yr).toBe(135285);
   });
 
   test('validates minimum investment', () => {

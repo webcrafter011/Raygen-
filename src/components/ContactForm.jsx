@@ -91,7 +91,7 @@ const ContactForm = ({ onClose }) => {
           <input
             type="text"
             name="amount"
-            placeholder="Amount interested (₹)"
+            placeholder="Units of kW"
             value={formData.amount}
             onChange={handleChange}
             aria-label="Investment Amount"

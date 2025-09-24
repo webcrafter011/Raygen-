@@ -114,12 +114,12 @@ src/
 
 ### Key Messaging
 - **Headline**: "Own a solar asset. Earn passive monthly income."
-- **Value Prop**: Invest from ₹60,000, get 8.25% annual returns, 15-year locking period
+- **Value Prop**: Invest from ₹60,000, get 8.37% annual returns, 15-year locking period
 - **Trust Elements**: Professional management, predictable income, transparent operations
 
 ### Investment Details
 - **Minimum**: ₹60,000 (1 kW)
-- **Returns**: 8.25% per annum (₹412.50 monthly per kW)
+- **Returns**: 8.37% per annum (₹418.25 monthly per kW)
 - **Term**: 15-year locking period with principal return at maturity
 - **Target**: Monthly passive income without rooftop solar hassles
 

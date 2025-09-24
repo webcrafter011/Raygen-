@@ -3,8 +3,8 @@ import './TrustStrip.css';
 
 const trustItems = [
   { label: '1 kW = ₹60,000' },
-  { label: 'Annual yield 8.25% p.a.' },
-  { label: 'Monthly payout per kW = ₹412.50' },
+  { label: 'Annual yield 8.37% p.a.' },
+  { label: 'Monthly payout per kW = ₹418.25' },
   { label: '15-year locking period' },
 ];
 

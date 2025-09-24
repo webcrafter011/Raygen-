@@ -41,8 +41,8 @@ const About = () => (
           <h2>Contact Information</h2>
           <div className="contact-details">
             <p><strong>Email:</strong> info@raygensolar.com</p>
-            <p><strong>Phone:</strong> +91-9876543210</p>
-            <p><strong>WhatsApp:</strong> +91-9876543210</p>
+            <p><strong>Phone:</strong> +91-8432997835</p>
+            <p><strong>WhatsApp:</strong> +91-9529661862</p>
             <p><strong>Office Hours:</strong> Monday - Friday, 9:00 AM - 6:00 PM</p>
           </div>
         </div>
